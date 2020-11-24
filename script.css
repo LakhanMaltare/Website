@@ -1,0 +1,150 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    header {
+        background-image: url(pexels-armin-rimoldi-5554292.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    
+    body {
+        font-size: 20px;
+        overflow-x: hidden;
+        background-color: aliceblue;
+        font-family: 'Flamenco', cursive;
+    }
+    
+    .clearfix ::after {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        clear: both;
+        height: 0px;
+    }
+    
+    .row {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    
+    .main-nav {
+        margin-top: 60px;
+        float: right;
+        font-size: larger;
+    }
+    
+    .main-nav li {
+        display: inline-block;
+        list-style: none;
+        margin-left: 40px;
+    }
+    
+    .main-nav li a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    
+    .main-nav li a:hover {
+        color: darkgray;
+        border-bottom: 3px solid white;
+    }
+    
+    .main-content-header {
+        width: 1180px;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+    
+    h1 {
+        font-size: 240%;
+        color: white;
+        word-spacing: 3px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 30px;
+        text-decoration: none;
+        font-weight: lighter;
+        border-radius: 200px;
+        text-transform: uppercase;
+        transition: background-color .2s, border .2s, color .2s;
+    }
+    
+    .btn-full {
+        background-color: transparent;
+        margin-right: 15px;
+        color: white;
+        border: 1px solid;
+    }
+    
+    .btn-full:hover {
+        background-color: black;
+    }
+    
+    .colorchange {
+        animation: lakhan 1s infinite;
+    }
+    
+    @keyframes lakhan {
+        0% {
+            color: black;
+        }
+        25% {
+            color: red;
+        }
+        50% {
+            color: blue;
+        }
+        100% {
+            color: yellow;
+        }
+    }
+    
+    .mobileicon {
+        display: none;
+    }
+    
+    @media only screen and (max-width:1180px) {
+        .main-content-header {
+            width: 100%;
+            padding: 0 2%;
+        }
+    }
+    
+    @media only screen and (max-width:998px) {
+        h1 {
+            font-size: 200%;
+        }
+    }
+    
+    @media only screen and (max-width:768px) {
+        h1 {
+            font-size: 180%;
+        }
+        .main-nav {
+            display: none;
+        }
+        .mobileicon {
+            display: inline-block;
+            color: white;
+            float: right;
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+        .main-nav li {
+            float: left;
+            display: block;
+            margin-top: 10px;
+        }
+    }
